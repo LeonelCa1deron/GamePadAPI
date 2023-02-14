@@ -3,7 +3,7 @@
 ## Subdirección Académica
 ## Departamento de Sistemas y Computación
 
-![](https://www.google.com.mx/url?sa=i&url=https%3A%2F%2Fwww.tijuana.tecnm.mx%2Finstalaciones%2Flogo_itt%2F&psig=AOvVaw0uY6LG_VbCqV56Kfhnh1EH&ust=1676502744913000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCID9ucaRlv0CFQAAAAAdAAAAABAD)
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLsKvUg8-nDmDZq2bloPaKQQNzrEdl41v0tOhv---gFuKfVvrUMGhSh7qAFR9y97A7tXA&usqp=CAU)
 
 # FEB - JUN 2023
 
