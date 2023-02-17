@@ -1,39 +1,59 @@
+let controllerIndex = null;
+
 window.addEventListener("gamepadconnected", (event) => {
-    console.log("A gamepad connected:");
-    console.log(event.gamepad);
-  });
+  const gamepad = event.gamepad;
+  controllerIndex = gamepad.index;
+  console.log("connected");
+});
 
 window.addEventListener("gamepaddisconnected", (event) => {
-    console.log("A gamepad disconnected:");
-    console.log(event.gamepad);
-  });
+  controllerIndex = null;
+  console.log("disconnected");
+});
 
-var gamepads = navigator.getGamepads;
-console.log("gamepads");
+function handleButtons(buttons) {
+  for (let i = 0; i < buttons.length; i++) {
+    const button = buttons[i];
+    const buttonElement = document.getElementById(`controller-b${i}`);
+    const selectedButtonClass = "selected-button";
 
-[
-    {
-      axes: [0.01, 0.01, 0.02, 0.04],
-      buttons: [
-        { pressed: true, value: 1 },
-        { pressed: false, value: 0 },
-        { pressed: false, value: 0 },
-        { pressed: false, value: 0 }
-      ],
-      connected: true,
-      id: "Xbox 360 Controller (XInput STANDARD GAMEPAD)",
-      index: 0,
-      mapping: "standard",
-      timestamp: 177550
-    },
-    null,
-    null,
-    null
-]
+    if (buttonElement) {
+      if (button.value > 0) {
+        buttonElement.classList.add(selectedButtonClass);
+        buttonElement.style.filter = `contrast(${button.value * 150}%)`;
+      } else {
+        buttonElement.classList.remove(selectedButtonClass);
+        buttonElement.style.filter = `contrast(100%)`;
+      }
+    }
+  }
+}
 
-gamepad.vibrationActuator.playEffect("dual-rumble", {
-    startDelay: 0,
-    duration: 1000,
-    weakMagnitude: 1.0,
-    strongMagnitude: 1.0
-  });
+function updateStick(elementId, leftRightAxis, upDownAxis) {
+  const multiplier = 25;
+  const stickLeftRight = leftRightAxis * multiplier;
+  const stickUpDown = upDownAxis * multiplier;
+
+  const stick = document.getElementById(elementId);
+  const x = Number(stick.dataset.originalXPosition);
+  const y = Number(stick.dataset.originalYPosition);
+
+  stick.setAttribute("cx", x + stickLeftRight);
+  stick.setAttribute("cy", y + stickUpDown);
+}
+
+function handleSticks(axes) {
+  updateStick("controller-b10", axes[0], axes[1]);
+  updateStick("controller-b11", axes[2], axes[3]);
+}
+
+function gameLoop() {
+  if (controllerIndex !== null) {
+    const gamepad = navigator.getGamepads()[controllerIndex];
+    handleButtons(gamepad.buttons);
+    handleSticks(gamepad.axes);
+  }
+  requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
