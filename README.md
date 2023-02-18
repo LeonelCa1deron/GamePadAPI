@@ -32,3 +32,7 @@
 
 ## Introducción
 Para esta práctica, se llevará a cabo el uso de una API, la cual es seleccionada días previos para posteriormente trabajar con ello en Visual Studio Code, donde se utilizarán los lenguajes de programación de JavaScript y HTML, y realizar la conexión de este. El objetivo de está práctica será lograr funcionar la API una vez programado en el software VS y finalmente implementar extensión de LiveServer para ver en vivo el funcionamiento del mismo en el navegador; en este caso se utilizará GamePad API, el cual para el usuario se le mostrará el diseño de un mando de PS4, donde deberá conectar su mando al dispositivo en el que se ejecuta el código y por medio de ello podrá visualizar los movimientos realizados en el mando reflejado en la pestaña en funcionamiento.
+
+![](https://miro.medium.com/max/480/1*MGcLJS1ZvMFcBA94PXn16Q.png)
+
+---
