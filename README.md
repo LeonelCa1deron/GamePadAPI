@@ -1,36 +1,38 @@
 ![](itt.png) ![](syc.png) ![](tecnm.png)
 
-## Tecnológico Nacional de México
-## Instituto Tecnológico de Tijuana
-## Subdirección Académica
-## Departamento de Sistemas y Computación
-
-## FEB - JUN 2023
+Tecnológico Nacional de México
+Instituto Tecnológico de Tijuana
+Subdirección Académica
+Departamento de Sistemas y Computación
 
 ---
 
-## Carrera
-#### Ingeniería en Sistemas Computacionales
+FEB - JUN 2023
 
 ---
 
-## Materia y Serie
-#### Programación Web | AEB-1055
+Carrera:
+Ingeniería en Sistemas Computacionales
 
 ---
 
-## Práctica de API (GamePadAPI)
+Materia y Serie
+Programación Web | AEB-1055
 
 ---
 
-## Unidad I
+Práctica: GamePad API
 
 ---
 
-## Alumno y Número de Control
-#### Calderón Gastelum Sergio Leonel - 18212153
+Unidad I
 
 ---
 
-## Docente
-#### Dra. Daniela Adriana Sánchez Vizcarra.
+Alumno y Número de Control:
+Calderón Gastelum Sergio Leonel - 18212153
+
+---
+
+Docente:
+Dra. Daniela Adriana Sánchez Vizcarra.
